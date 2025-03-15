@@ -15,15 +15,21 @@ const Navigation = () => {
             className="bg-black border-b border-yellow-500"
         >
             <div className="max-w-7xl mx-auto px-4 flex justify-between h-16">
-                <a href="/" className="flex items-center space-x-4">
+                <Link
+                    to="services"
+                    smooth={true}
+                    duration={500}
+                    className="flex items-center space-x-4 hover:text-yellow-500 cursor-pointer"
+                >
                     <div className="flex items-center space-x-2">
-                        <img src={icon} className="h-10 w-auto" alt="T-REX Logo" />
+                        <img src={icon} className="h-10 w-auto" alt="T-REX Logo"/>
                         <div className="font-bold text-2xl">
                             <span className="text-yellow-500">T-REX</span>
                             <span className="text-white"> SOLUTIONS</span>
                         </div>
                     </div>
-                </a>
+                </Link>
+
                 <div className="hidden md:flex items-center space-x-6">
                     <Link
                         to="services"
