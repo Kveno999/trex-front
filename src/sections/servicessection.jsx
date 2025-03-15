@@ -1,17 +1,23 @@
 import React from "react";
 import {ChevronRight, Code, TestTube} from "lucide-react";
-
+import {motion} from 'framer-motion';
+import {fadeIn, slideUp, staggerContainer} from '../variants.jsx'
 
 const ServicesSection = () => {
     return (
         <section id="services" className="py-16 bg-gray-900">
             <div className="max-w-7xl mx-auto px-4">
-                <div className="text-center mb-12">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.3 }}
+                    variants={fadeIn}
+                    className="text-center mb-12">
                     <h2 className="text-3xl font-bold">
                         Our <span className="text-yellow-500">Services</span>
                     </h2>
                     <div className="w-16 h-1 bg-yellow-500 mx-auto mt-4"></div>
-                </div>
+                </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Jira Development Services */}

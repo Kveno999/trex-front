@@ -12,13 +12,12 @@ import AboutSection from "./sections/aboutsection.jsx";
 import CtaSection from "./sections/ctasection.jsx";
 import Footer from "./sections/footer.jsx";
 import Contact from "./sections/contactsection.jsx";
+import ScrollBar from "./sections/scrollbar.jsx";
 
 const TrexSolutionsLanding = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
     return (
         <Router>
-            <div className="min-h-screen bg-black text-white">
+            <div className="min-h-screen bg-black text-white !scroll-smooth">
                 <Navigation/>
                 <HeroSection/>
                 <ServicesSection/>
@@ -26,6 +25,7 @@ const TrexSolutionsLanding = () => {
                 <Contact/>
                 <CtaSection/>
                 <Footer/>
+                <ScrollBar/>
             </div>
         </Router>
     );
